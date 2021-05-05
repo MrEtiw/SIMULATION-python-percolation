@@ -2,6 +2,10 @@
 
 Percolation refers to the movement and filtering of fluids though porous materials.
 Therefore, it refers to the movement of particules through a lattice.
+This project simulates a "system" with a lattice (grid).
+Each point of the grid can be "filled" (1) or "empty" (0).
+A "percolation path" is a continuous path of filled points across the system (from left to right).
+This could represent water flowing through coffee grinds, an electric current follwowing conductive islands, etc.
 
 
 ## A long time ago
