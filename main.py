@@ -17,3 +17,6 @@ b = get_labeled_clusters(grid)
 show_clusters(b)
 c = is_cluster_spanning_left_to_right(b)
 
+## Next:
+# descriptive stats about clusters (nb per cluster, average, median, biggest, etc.)
+
