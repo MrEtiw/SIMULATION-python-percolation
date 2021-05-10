@@ -1,13 +1,9 @@
 from scipy.ndimage import label
-import numpy as np
 
 
 def get_labeled_clusters(grid):
-    labels, nb_of_clusters = label(grid)
-    return labels
-
-
-
+    labeled_grid, nb_of_clusters = label(grid)
+    return labeled_grid
 
 
 def get_clusters_in_a_col(labeled_grid, col_index):
@@ -15,8 +11,6 @@ def get_clusters_in_a_col(labeled_grid, col_index):
     clusters_in_col = set(col)
     clusters_in_col.discard(0)
     return clusters_in_col
-
-
 
 
 def get_clusters_spanning_from_left_to_right(labeled_grid):
