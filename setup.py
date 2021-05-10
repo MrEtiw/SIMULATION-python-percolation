@@ -6,10 +6,9 @@ def get_empty_grid(grid_size):
 
 
 def fill_empty_grid(empty_grid, p):
-    threshold_grid = np.random.random(empty_grid.shape)
-    threshold_grid[threshold_grid >= p] = 1
-    threshold_grid[threshold_grid < p] = 0
-    return empty_grid + threshold_grid
+    random_grid = np.random.random(empty_grid.shape)
+    index_to_fill = random_grid <=p
+    return empty_grid + 1*index_to_fill
 
 
 def get_filled_grid(grid_size, p):
