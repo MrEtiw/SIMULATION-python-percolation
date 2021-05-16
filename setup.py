@@ -14,3 +14,4 @@ def fill_empty_grid(empty_grid, p):
 def get_filled_grid(grid_size, p):
     empty_grid = get_empty_grid(grid_size)
     return fill_empty_grid(empty_grid, p)
+

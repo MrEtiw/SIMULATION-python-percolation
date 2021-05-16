@@ -1,4 +1,5 @@
 from scipy.ndimage import label
+import numpy as np
 
 
 def get_labeled_clusters(grid):
@@ -19,9 +20,43 @@ def get_clusters_spanning_from_left_to_right(labeled_grid):
     return set.intersection(first_col_clusters, last_col_clusters)
 
 
-def is_cluster_spanning_left_to_right(labeled_grid):
+def is_a_cluster_spanning_left_to_right(labeled_grid):
     clusters = get_clusters_spanning_from_left_to_right(labeled_grid)
     if len(clusters) > 0:
         return True
     else:
         return False
+
+
+def get_clusters_number_and_counts(labeled_grid):
+    clusters, counts = np.unique(labeled_grid, return_counts=True)
+
+    # remove the 0 cluster from clusters and counts
+    zero_index = np.where(clusters == 0)[0][0]
+    clusters = np.delete(clusters, zero_index)
+    counts = np.delete(counts, zero_index)
+
+    return clusters, counts
+
+
+def get_biggest_cluster(labeled_grid):
+    clusters, counts = get_clusters_number_and_counts(labeled_grid)
+    max_value_index = np.argmax(counts)
+    return clusters[max_value_index]
+
+
+def get_descriptive_stats_about_clusters(labeled_grid):
+    clusters, counts = get_clusters_number_and_counts(labeled_grid)
+    nb_clusters = len(clusters)
+    average_cluster_size = np.mean(counts)
+    median_cluster_size = int(np.median(counts))
+    biggest_cluster_size = np.max(counts)
+    smallest_cluster_size = np.min(counts)
+
+    return {
+        "nb_clusters": nb_clusters,
+        "average_cluster_size": average_cluster_size,
+        "median_cluster_size": median_cluster_size,
+        "biggest_cluster_size": biggest_cluster_size,
+        "smallest_cluster_size": smallest_cluster_size,
+    }
