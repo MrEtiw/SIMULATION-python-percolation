@@ -9,6 +9,7 @@ def show_grid(grid):
     plt.figure()
     plt.imshow(grid, cmap="binary")
     plt.colorbar()
+    return None
 
 
 def show_clusters(labeled_grid):
@@ -19,6 +20,7 @@ def show_clusters(labeled_grid):
     # plt.imshow(copy_labeled, cmap="tab10")
     plt.imshow(copy_labeled)
     del copy_labeled
+    return None
 
 
 def show_biggest_cluster(labeled_grid):
@@ -45,3 +47,6 @@ def show_biggest_cluster(labeled_grid):
 
     plt.figure()
     plt.imshow(copy_labeled)
+
+    del copy_labeled
+    return None
