@@ -16,7 +16,7 @@ def show_clusters(labeled_grid):
     copy_labeled = np.copy(labeled_grid)
     copy_labeled[copy_labeled == 0] = -1
     plt.figure()
-    #plt.imshow(copy_labeled, cmap="tab10")
+    # plt.imshow(copy_labeled, cmap="tab10")
     plt.imshow(copy_labeled)
     del copy_labeled
 
@@ -30,23 +30,18 @@ def show_biggest_cluster(labeled_grid):
     copy_labeled = np.copy(labeled_grid)
     biggest_cluster_number = get_biggest_cluster(copy_labeled)
 
-
     # biggest cluster
-    biggest_positions = (copy_labeled==biggest_cluster_number)
+    biggest_positions = copy_labeled == biggest_cluster_number
 
     # empty positions
-    empty_positions = (copy_labeled == 0)
+    empty_positions = copy_labeled == 0
 
     # other positions
-    other_positions = np.invert (empty_positions + biggest_positions)
+    other_positions = np.invert(empty_positions + biggest_positions)
 
     copy_labeled[biggest_positions] = fill_biggest_value
     copy_labeled[empty_positions] = fill_empty_value
     copy_labeled[other_positions] = fill_others_value
 
-
     plt.figure()
     plt.imshow(copy_labeled)
-
-
-
