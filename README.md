@@ -1,4 +1,26 @@
-# py_percolation
+# Simulation of Percolating Systems, using Python
+
+**CONTEXT**: Personal project, intended to replicate and improve thrid year physics engineering capstone project. See: LINK
+
+**DESCRIPTION**:
+- Intends to simulate percolating systems.
+- Given a probability for each element of a specific lattice, what is the probability that there exists a percolating path through the system?
+- Explanations and comments written in English.
+
+**LANGUAGES / TECH**: Python
+
+**ADDITIONAL INFOS:**
+
+
+
+
+
+
+
+
+
+
+
 
 Percolation refers to the movement and filtering of fluids though porous materials.
 Therefore, it refers to the movement of particules through a lattice.
