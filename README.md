@@ -2,7 +2,7 @@
 
 **CONTEXT**: 
 
-Personal project, intended to replicate and improve thrid year physics engineering capstone project. See: LINK
+Personal project, intended to replicate and improve thrid year physics engineering capstone project. See: https://github.com/MrEtiw/simulation-matlab-percolation
 
 **DESCRIPTION**:
 - Intends to simulate percolating systems.
