@@ -1,13 +1,18 @@
 # Simulation of Percolating Systems, using Python
 
-**CONTEXT**: Personal project, intended to replicate and improve thrid year physics engineering capstone project. See: LINK
+**CONTEXT**: 
+
+Personal project, intended to replicate and improve thrid year physics engineering capstone project. See: LINK
 
 **DESCRIPTION**:
 - Intends to simulate percolating systems.
 - Given a probability for each element of a specific lattice, what is the probability that there exists a percolating path through the system?
 - Explanations and comments written in English.
 
-**LANGUAGES / TECH**: Python
+**LANGUAGES / TECH**:
+- Python
+- Numpy library
+- Matplotlib library
 
 **ADDITIONAL INFOS:**
 
